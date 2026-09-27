@@ -1,0 +1,13 @@
+{
+  "features": [
+    "vibration",
+    "temperature",
+    "pressure"
+  ],
+  "lookback_hours": 24,
+  "horizon_hours": 24,
+  "n_sequences": 33649,
+  "n_devices": 50,
+  "hourly_rows": 35999,
+  "target_positive_rate": 0.05628696084022522
+}

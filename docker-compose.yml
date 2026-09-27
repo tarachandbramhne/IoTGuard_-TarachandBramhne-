@@ -1,0 +1,70 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  ml:
+    build:
+      context: .
+      dockerfile: ml/Dockerfile
+    environment:
+      MONGO_URI: mongodb://mongo:27017/iotguard
+      REDIS_URL: redis://redis:6379/0
+      MODEL_PATH: /app/artifacts/iotguard_lstm.keras
+      FALLBACK_MODEL_PATH: /app/artifacts/demo_risk_model.joblib
+      HIGH_RISK_THRESHOLD: "0.80"
+      MEDIUM_RISK_THRESHOLD: "0.55"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+    depends_on:
+      - mongo
+      - redis
+
+  node-api:
+    build:
+      context: .
+      dockerfile: node-api/Dockerfile
+    environment:
+      MONGO_URI: mongodb://mongo:27017/iotguard
+      REDIS_URL: redis://redis:6379/0
+      ML_URL: http://ml:8000
+      PORT: 4000
+      HIGH_RISK_THRESHOLD: "0.80"
+      MEDIUM_RISK_THRESHOLD: "0.55"
+      USE_MONGO: "true"
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+      - redis
+      - ml
+
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    environment:
+      VITE_API_URL: http://localhost:4000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - node-api
+
+volumes:
+  mongo_data:
+  redis_data:

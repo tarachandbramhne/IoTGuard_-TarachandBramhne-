@@ -1,0 +1,12 @@
+{
+  "device_id": 1,
+  "backend": "demo_fallback",
+  "method": "heuristic_demo",
+  "example": {
+    "vibration": 0.61,
+    "temperature": 0.24,
+    "pressure": 0.15
+  },
+  "top_sensor": "vibration",
+  "note": "Illustrative fallback output; real LSTM runs use SHAP GradientExplainer."
+}

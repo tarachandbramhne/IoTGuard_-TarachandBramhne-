@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f5f7fb"/>
+  <rect width="1200" height="92" fill="#111827"/>
+  <text x="56" y="42" fill="white" font-size="30" font-family="Arial" font-weight="700">IoTGuard</text>
+  <text x="56" y="69" fill="#cbd5e1" font-size="15" font-family="Arial">Predictive Maintenance • 24h Failure Risk</text>
+  <text x="1040" y="52" fill="#22c55e" font-size="16" font-family="Arial" font-weight="700">● Live</text>
+  <g font-family="Arial">
+    <g fill="white" stroke="#e7eaf0">
+      <rect x="50" y="120" width="250" height="100" rx="16"/><rect x="320" y="120" width="250" height="100" rx="16"/><rect x="590" y="120" width="250" height="100" rx="16"/><rect x="860" y="120" width="290" height="100" rx="16"/>
+      <rect x="50" y="240" width="520" height="470" rx="16"/><rect x="590" y="240" width="560" height="470" rx="16"/>
+    </g>
+    <text x="72" y="152" fill="#64748b" font-size="13">Devices</text><text x="72" y="190" fill="#172033" font-size="30" font-weight="700">50</text>
+    <text x="342" y="152" fill="#64748b" font-size="13">High Risk</text><text x="342" y="190" fill="#172033" font-size="30" font-weight="700">6</text>
+    <text x="612" y="152" fill="#64748b" font-size="13">Medium Risk</text><text x="612" y="190" fill="#172033" font-size="30" font-weight="700">11</text>
+    <text x="882" y="152" fill="#64748b" font-size="13">Selected Risk</text><text x="882" y="190" fill="#172033" font-size="30" font-weight="700">84.2%</text>
+    <text x="72" y="274" fill="#172033" font-size="20" font-weight="700">Device Grid</text>
+    <g font-size="13">
+      <g fill="#fee2e2" stroke="#ef4444"><rect x="72" y="300" width="86" height="55" rx="9"/><rect x="170" y="300" width="86" height="55" rx="9"/><rect x="268" y="300" width="86" height="55" rx="9"/></g>
+      <g fill="#fef3c7" stroke="#f59e0b"><rect x="366" y="300" width="86" height="55" rx="9"/><rect x="464" y="300" width="86" height="55" rx="9"/></g>
+      <text x="86" y="324">Device 1</text><text x="86" y="344" font-weight="700">84%</text>
+      <text x="184" y="324">Device 2</text><text x="184" y="344" font-weight="700">81%</text>
+      <text x="282" y="324">Device 3</text><text x="282" y="344" font-weight="700">79%</text>
+      <text x="380" y="324">Device 4</text><text x="380" y="344" font-weight="700">63%</text>
+      <text x="478" y="324">Device 5</text><text x="478" y="344" font-weight="700">60%</text>
+    </g>
+    <text x="612" y="274" fill="#172033" font-size="20" font-weight="700">Device 1</text>
+    <text x="1000" y="274" fill="#991b1b" font-size="12" font-weight="700">HIGH</text>
+    <path d="M620 355 C670 320 720 390 760 350 S850 300 900 365 S1000 325 1100 345" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <line x1="620" y1="400" x2="1110" y2="400" stroke="#e2e8f0"/><line x1="620" y1="340" x2="1110" y2="340" stroke="#e2e8f0"/><line x1="620" y1="280" x2="1110" y2="280" stroke="#e2e8f0"/>
+    <text x="612" y="448" fill="#64748b" font-size="13">Next 24h risk</text><text x="1018" y="448" fill="#172033" font-size="24" font-weight="700">84.2%</text>
+    <text x="612" y="486" fill="#172033" font-size="16" font-weight="700">Why is the risk high?</text>
+    <rect x="650" y="595" width="90" height="70" fill="#94a3b8"/><rect x="800" y="625" width="90" height="40" fill="#94a3b8"/><rect x="950" y="645" width="90" height="20" fill="#94a3b8"/>
+    <text x="660" y="688" fill="#64748b" font-size="12">vibration</text><text x="812" y="688" fill="#64748b" font-size="12">temperature</text><text x="966" y="688" fill="#64748b" font-size="12">pressure</text>
+  </g>
+</svg>
